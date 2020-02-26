@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kbs_project.FXMLDocumentController">
+   <children>
+      <Pane fx:id="p_user" prefHeight="607.0" prefWidth="802.0" style="-fx-background-color: #455a64;">
+         <children>
+            <Label layoutX="253.0" layoutY="54.0" prefHeight="59.0" prefWidth="297.0" style="-fx-background-color: #37474f; -fx-background-radius: 10;" text="Welcome Ser" textFill="#a9b4b9">
+               <font>
+                  <Font size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="131.0" layoutY="338.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f;" text="Type :" textFill="#a9b4b9">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="user_type" layoutX="219.0" layoutY="338.0" prefHeight="39.0" prefWidth="402.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="131.0" layoutY="391.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f;" text="Reason :" textFill="#a9b4b9">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="user_res" layoutX="219.0" layoutY="391.0" prefHeight="39.0" prefWidth="402.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="131.0" layoutY="444.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f;" text="Damdge :" textFill="#a9b4b9">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="user_dam" layoutX="219.0" layoutY="444.0" prefHeight="39.0" prefWidth="402.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="131.0" layoutY="497.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f;" text="Solution :" textFill="#a9b4b9">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="user_sol" layoutX="219.0" layoutY="497.0" prefHeight="39.0" prefWidth="402.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <JFXTextField fx:id="user_input" focusColor="#a9b4b9" labelFloat="true" layoutX="219.0" layoutY="205.0" onAction="#use_user" prefHeight="56.0" prefWidth="402.0" promptText="Please Enter your problem" unFocusColor="#37474f">
+               <font>
+                  <Font size="26.0" />
+               </font></JFXTextField>
+            <JFXButton layoutX="727.0" layoutY="14.0" onAction="#back" prefHeight="46.0" prefWidth="63.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@z8.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane fx:id="p_admain" layoutX="-1.0" prefHeight="607.0" prefWidth="809.0" style="-fx-background-color: #455a64;">
+         <children>
+            <Pane fx:id="p_title" prefHeight="32.0" prefWidth="809.0" style="-fx-background-color: #37474f;">
+               <children>
+                  <JFXButton fx:id="b_main" layoutY="-1.0" onAction="#main" prefHeight="39.0" prefWidth="63.0" style="-fx-background-color: #455a64;" text="Main">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="b_insert" layoutX="62.0" layoutY="-1.0" onAction="#pane_insert" prefHeight="39.0" prefWidth="63.0" style="-fx-background-color: #37474f;" text="Insert">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="b_update" layoutX="125.0" layoutY="-1.0" onAction="#pane_update" prefHeight="39.0" prefWidth="63.0" style="-fx-background-color: #37474f;" text="update">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="b_delet" layoutX="188.0" layoutY="-1.0" onAction="#pane_delet" prefHeight="39.0" prefWidth="63.0" style="-fx-background-color: #37474f;" text="Delet">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="p_insert" layoutY="32.0" prefHeight="580.0" prefWidth="815.0" style="-fx-background-color: #455a64;">
+               <children>
+                  <Label layoutX="342.0" layoutY="54.0" prefHeight="73.0" prefWidth="132.0" style="-fx-background-color: #37474f; -fx-background-radius: 10;" text="Insert" textFill="#a9b4b9">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="262.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Type :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="insert_type" layoutX="251.0" layoutY="262.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="315.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Reason :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="insert_res" layoutX="251.0" layoutY="315.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="368.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Damdge :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="insert_dam" layoutX="251.0" layoutY="368.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="421.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Solution :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="insert_solu" layoutX="251.0" layoutY="421.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="210.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Problem :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="insert_prob" layoutX="251.0" layoutY="210.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton layoutX="161.0" layoutY="524.0" prefHeight="39.0" prefWidth="504.0" style="-fx-background-color: #37474f; -fx-background-radius: 20;" text="Insert" textFill="#a9b4b9">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="p_updata" layoutY="32.0" prefHeight="580.0" prefWidth="815.0" style="-fx-background-color: #455a64;">
+               <children>
+                  <Label layoutX="329.0" layoutY="55.0" prefHeight="73.0" prefWidth="169.0" style="-fx-background-color: #37474f; -fx-background-radius: 10;" text="Update" textFill="#a9b4b9">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="262.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Type :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="up_type" layoutX="251.0" layoutY="262.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="315.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Reason :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="up_res" layoutX="251.0" layoutY="315.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="368.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Damdge :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="up_dam" layoutX="251.0" layoutY="368.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="421.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Solution :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="up_sol" layoutX="251.0" layoutY="421.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="210.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Problem :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="up_prob" layoutX="251.0" layoutY="210.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton layoutX="161.0" layoutY="524.0" prefHeight="39.0" prefWidth="504.0" style="-fx-background-color: #37474f; -fx-background-radius: 20;" text="Update" textFill="#a9b4b9">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="p_delet" layoutY="32.0" prefHeight="580.0" prefWidth="815.0" style="-fx-background-color: #455a64;">
+               <children>
+                  <Label layoutX="342.0" layoutY="54.0" prefHeight="73.0" prefWidth="132.0" style="-fx-background-color: #37474f; -fx-background-radius: 10;" text="Delet" textFill="#a9b4b9">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="154.0" layoutY="262.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Type :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="de_type" disable="true" layoutX="251.0" layoutY="262.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="315.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Reason :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="de_res" disable="true" layoutX="251.0" layoutY="315.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="368.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Damdge :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="de_dam" disable="true" layoutX="251.0" layoutY="368.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="421.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Solution :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="de_sol" disable="true" layoutX="251.0" layoutY="421.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="154.0" layoutY="210.0" prefHeight="39.0" prefWidth="88.0" style="-fx-background-color: #37474f; -fx-background-radius: 5;" text="Problem :" textFill="#a9b4b9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="de_prob" layoutX="251.0" layoutY="210.0" prefHeight="39.0" prefWidth="402.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton layoutX="161.0" layoutY="524.0" prefHeight="39.0" prefWidth="504.0" style="-fx-background-color: #37474f; -fx-background-radius: 20;" text="Delet" textFill="#a9b4b9">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="p_main" layoutY="32.0" prefHeight="580.0" prefWidth="815.0" style="-fx-background-color: #455a64;">
+               <children>
+                  <Label layoutX="207.0" layoutY="55.0" prefHeight="73.0" prefWidth="402.0" style="-fx-background-color: #37474f; -fx-background-radius: 10;" text="Welcome admain" textFill="#a9b4b9">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="740.0" layoutY="4.0" onAction="#back" prefHeight="46.0" prefWidth="63.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@z8.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="p_login" prefHeight="607.0" prefWidth="802.0" style="-fx-background-color: #455a64;">
+         <children>
+            <ImageView fitHeight="607.0" fitWidth="802.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@back.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="186.0" layoutY="99.0" prefHeight="466.0" prefWidth="431.0" style="-fx-background-color: #000000; -fx-opacity: .7; -fx-background-radius: 100;">
+               <children>
+                  <JFXToggleButton fx:id="togg" layoutX="171.0" layoutY="123.0" text=" " toggleColor="#3949ab" toggleLineColor="#1a237e" unToggleColor="#512da8" unToggleLineColor="#311b92" />
+                  <Label layoutX="126.0" layoutY="139.0" prefHeight="27.0" prefWidth="42.0" text="User" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="244.0" layoutY="139.0" prefHeight="27.0" prefWidth="63.0" text="Admain" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="150.0" layoutY="14.0" prefHeight="73.0" prefWidth="132.0" text="LogIn" textFill="WHITE">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="user_name" layoutX="112.0" layoutY="233.0" prefHeight="42.0" prefWidth="243.0" promptText="User Name" style="-fx-opacity: .4;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="62.0" layoutY="233.0" prefHeight="39.0" prefWidth="42.0" style="-fx-background-color: #ffffff; -fx-opacity: .4; -fx-background-radius: 7;">
+                     <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-user-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <TextField fx:id="pass" layoutX="111.0" layoutY="302.0" prefHeight="42.0" prefWidth="243.0" promptText="PassWord" style="-fx-opacity: .4;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="61.0" layoutY="302.0" prefHeight="39.0" prefWidth="42.0" style="-fx-background-color: #ffffff; -fx-opacity: .4; -fx-background-radius: 7;">
+                     <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons8-lock-50.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <JFXButton layoutX="63.0" layoutY="371.0" onAction="#login" prefHeight="51.0" prefWidth="288.0" style="-fx-background-color: #6746c3; -fx-background-radius: 10;" text="Log In" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</Pane>

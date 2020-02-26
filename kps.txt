@@ -1,0 +1,417 @@
+(defglobal  ?*x* = "hello x")
+(defglobal  ?*y* = "hello y")
+(defglobal  ?*z* = "hello z")
+(defglobal  ?*s* = "hello s")
+
+;;;;;templatescode
+
+(deftemplate problem
+(slot prob))
+
+(deftemplate type
+(slot ty))
+
+(deftemplate reason
+(slot rea))
+
+(deftemplate over_come
+(slot oc))
+
+(deftemplate damage
+(slot dam))
+
+;;;;rules code
+
+(defrule rule1
+(problem {prob =="Junk boxes"})
+=>(assert(type(ty"visual pollution")))(assert(reason(rea"Throw rubbish in the street"))) (bind ?*x*  "visual pollution") (bind ?*y*  "Throw rubbish in the street") )
+
+(defrule rule2
+(reason{rea =="Throw rubbish in the street"})
+=>(assert (damage (dam"Negative impact on the general psychological")))
+(bind ?*z*  "Negative impact on the general psychological"))
+
+(defrule rule3
+(damage {dam =="Negative impact on the general psychological"})
+=>(assert(over_come(oc"Provide many rubbish bins in the street ")))(bind ?*s*  "Provide many rubbish bins in the street "))
+
+
+
+(defrule rule4
+(problem {prob =="Inconsistent colors"})
+=>(assert(type(ty"visual pollution")))(assert(reason(rea"Choose inconsistent colors"))) (bind ?*x*  "visual pollution") (bind ?*y*  "Choose inconsistent colors") )
+
+(defrule rule5
+(reason{rea =="Choose inconsistent colors"})
+=>(assert (damage (dam"The ugliness of the scene and the discomfort of the eye")))(bind ?*z*  "The ugliness of the scene and the discomfort of the eye"))
+
+(defrule rule6
+(damage {dam =="The ugliness of the scene and the discomfort of the eye"})
+=>(assert(over_come(oc"Choose consistent colors")))(bind ?*s*  "Choose consistent colors "))
+
+
+
+(defrule rule7
+(problem {prob =="Housing in cemeteries"})
+=>(assert(type(ty"visual pollution")))(assert(reason(rea"Population increase"))) (bind ?*x*  "visual pollution") (bind ?*y*  "Population increase") )
+
+(defrule rule8
+(reason{rea =="Population increase"})
+=>(assert (damage (dam"Depression and mental illness")))(bind ?*z*  "Depression and mental illness"))
+
+(defrule rule9
+(damage {dam =="Depression and mental illness"})
+=>(assert(over_come(oc"Stay away from tombs")))(bind ?*s*  "Stay away from tombs"))
+
+
+
+(defrule rule10
+(problem {prob =="Preservatives"})
+=>(assert(type(ty"Chemical pollution")))(assert(reason(rea"Use it to keep food for a long time"))) (bind ?*x*  "Chemical pollution") (bind ?*y*  "Use it to keep food for a long time"))
+
+(defrule rule11
+(reason{rea =="Use it to keep food for a long time"})
+=>(assert (damage (dam"Cancer")))(bind ?*z*  "Cancer"))
+
+(defrule rule12
+(damage {dam =="Cancer"})
+=>(assert(over_come(oc"Stay away from canned foods")))(bind ?*s*  "Stay away from canned foods"))
+
+
+
+
+(defrule rule13
+(problem {prob =="Chemical fertilizers"})
+=>(assert(type(ty"Chemical pollution")))(assert(reason(rea"Use it to get crops faster"))) )
+
+(defrule rule14
+(reason{rea =="Use it to get crops faster"})
+=>(assert (damage (dam"A lot of diseases"))))
+
+(defrule rule15
+(damage {dam =="A lot of diseases"})
+=>(assert(over_come(oc"use Natural fertilizers"))))
+
+
+
+(defrule rule16
+(problem {prob =="Pollen"})
+=>(assert(type(ty"Biological pollution")))(assert(reason(rea"Transfer large numbers of pollen to flower plants")))(bind ?*x*  "Biological pollution") (bind ?*y*  "Transfer large numbers of pollen to flower plants") )
+
+(defrule rule17
+(reason{rea =="Transfer large numbers of pollen to flower plants"})
+=>(assert (damage (dam"Asthma and allergies")))(bind ?*z*  "Asthma and allergies"))
+
+(defrule rule18
+(damage {dam =="Asthma and allergies"})
+=>(assert(over_come(oc"Remove these plants to protect the human")))(bind ?*s*  "Remove these plants to protect the human"))
+
+
+
+(defrule rule19
+(problem {prob =="Insects"})
+=>(assert(type(ty"Biological pollution")))(assert(reason(rea"Animal waste"))) )
+
+(defrule rule20
+(reason{rea =="Animal waste"})
+=>(assert (damage (dam"Diseases of the stomach and digestive system"))))
+
+(defrule rule21
+(damage {dam =="Diseases of the stomach and digestive system"})
+=>(assert(over_come(oc"Burying or burning animal wast"))))
+
+
+
+
+(defrule rule22
+(problem {prob =="carbon monoxide"})
+=>(assert(type(ty"air pollution")))(assert(reason(rea"cars exhaust")))(bind ?*x*  "air pollution") (bind ?*y*  "cars exhaust"))
+
+(defrule rule23
+(reason{rea =="cars exhaust"})
+=>(assert(damage(dam"breathing of humman is affected")))(bind ?*z*  "breathing of humman is affected"))
+
+(defrule rule24
+(damage {dam =="breathing of humman is affected"})
+=>(assert(over_come(oc"using clean energy sources like sun")))(bind ?*s*  "using clean energy sources like sun"))
+
+
+
+(defrule rule25
+(problem {prob =="there is acid rain in air"})
+=>(assert(reason(rea"The chemicals produced  by factories combine with  water vapor"))))
+
+(defrule rule26
+(reason{rea =="The chemicals produced  by factories combine with  water vapor"})=>(assert (damage (dam"humman is affected with problems in thoracic system"))))
+
+(defrule rule27
+(damage {dam =="humman is affected with problems in thoracic system"})
+=>(assert(over_come(oc"putting strainers  on  factory  nozzels"))))
+
+
+
+
+(defrule rule28
+(problem {prob =="shortness of breath"})
+=>(assert(reason(rea"dust to the atmosphere"))))
+
+(defrule rule29
+(reason {rea =="dust to the atmosphere"})
+=>(assert(over_come (oc"plantting trees"))))
+
+
+
+
+(defrule rule30
+(problem {prob =="lack of Agricultural land"})
+=>(assert(type(ty"soil pollution")))(assert(reason(rea"more building")))(bind ?*x*  "soil pollution") (bind ?*y*  "more building"))
+
+(defrule rule31
+(reason{rea =="more building"})
+=>(assert (damage (dam"the unavailability of food products")))(bind ?*z*  "the unavailability of food products"))
+
+(defrule rule32
+(damage {dam =="the unavailability of food products"})
+=>(assert(over_come(oc"lack of building")))(bind ?*s*  "lack of building"))
+
+
+
+
+(defrule rule33
+(problem {prob =="imbalance in the growth of the plant"})
+=>(assert(reason(rea"imbalance in the components of the soil"))))
+
+(defrule rule34
+(reason {rea =="imbalance in the components of the soil"})
+=>(assert(over_come(oc"lack of desertification"))))
+
+
+
+
+(defrule rule35
+(problem {prob =="Weathering"})
+=>(assert(reason(rea"Unjust plowing of soil at inappropriate times"))))
+
+(defrule rule37
+(reason {rea =="Unjust plowing of soil at inappropriate times"})
+=>(assert(over_come(oc"lack of Unjust plowing of soil at inappropriate times"))))
+
+
+
+
+(defrule rule38
+(problem {prob =="suffocation of fish"})
+=>(assert(type(ty"Thermal pollution")))(assert(reason(rea"and fish  consumes a large amount of oxygen in the water"))))
+
+(defrule rule39
+(reason{rea =="fish consumes a large amount of oxygen in the water"})
+=>(assert (damage (dam"die large quantities of fish"))))
+
+(defrule rule40
+(damage {dam =="die large quantities of fish"})
+=>(assert(over_come(oc"maintain the temperature of the water and thus preserve oxygen"))))
+
+
+
+
+(defrule rule41
+(problem {prob =="imbalance in the distribution of fish wealth"})
+=>(assert(reason(rea"relocation of fish to the most stable places at temperatures"))))
+
+(defrule rule42
+(reason {rea =="relocation of fish to the most stable places at temperatures"})
+=>(assert(over_come(oc"the temperature of the water must be monitored"))))
+
+
+
+(defrule rule43
+(problem {prob =="Water conservation"})
+=>(assert(type(ty"water pollution")))(assert(reason(rea"throw wastes in the water"))) )
+
+(defrule rule44
+(reason{rea =="Throw wastes in the water"})
+=>(assert (damage (dam"Impact on human health"))))
+
+(defrule rule45
+(damage {dam =="Impact on human health"})
+=>(assert(over_come(oc"Landfill radioactive waste in desert areas"))))
+
+
+(defrule rule46
+(problem {prob =="the Sewage"})
+=>(assert(type(ty"water pollution")))(assert(reason(rea"Throw the sewage in the sea"))) )
+
+(defrule rule47
+(reason{rea =="Throw the sewage in the sea"})
+=>(assert (damage (dam"Negative Impact on human health"))))
+
+(defrule rule48
+(damage {dam =="Negative impact on human health"})
+=>(assert(over_come(oc"Keeping sewage away from different water sources"))))
+
+
+
+
+(defrule rule49
+(problem {prob =="Rainwater"})
+=>(assert(type(ty"water pollution")))(assert(reason(rea"Rainwater can flow into water"))) )
+
+(defrule rule50
+(reason{rea =="Rainwater can flow into water"})
+=>(assert (damage (dam"Negative impact on human health"))))
+
+(defrule rule51
+(damage {dam =="Negative impact on on human health"})
+=>(assert(over_come(oc"Eliminate air pollutants"))))
+
+
+(defrule rule52
+(problem {prob =="Decay of radioactive material"})
+=>(assert(type(ty"Radioactive pollution")))(assert(reason(rea"loss of mass in gamma, beta and alpha radiation"))) )
+
+(defrule rule53
+(reason{rea =="loss of mass in gamma, beta and alpha radiation"})
+=>(assert (damage (dam"Negative impact on human health"))))
+
+(defrule rule54
+(damage {dam =="Negative impact on human health"})
+=>(assert(over_come(oc"isolate the radioactive source"))))
+
+
+
+(defrule rule55
+(problem {prob =="some element"})
+=>(assert(type(ty"Radioactive pollution")))(assert(reason(rea"Some radioactive elements present in The earth's surface"))) )
+
+(defrule rule56
+(reason{rea =="Some radioactive elements present in The earth's surface"})
+=>(assert (damage (dam"Negative impact on human health"))))
+
+(defrule rule57
+(damage {dam =="Negative impact on human health"})
+=>(assert(over_come(oc"Increased deployment of devices that detect radioactive materials"))))
+
+
+(defrule rule58
+(problem {prob =="Noise"})
+=>(assert(type(ty"Noise pollution")))(assert(reason(rea"use of stimulators frequently in the means of conductors"))) )
+
+(defrule rule59
+(reason{rea =="use of stimulators frequently in the means of conductors"})
+=>(assert (damage (dam"Negative impact on human health"))))
+
+(defrule rule60
+(damage {dam =="Negative impact on human health"})
+=>(assert(over_come(oc"Imposition of fines and penalties"))))
+
+
+(defrule rule61
+(problem {prob =="machines used"})
+=>(assert(type(ty"Noise pollution")))(assert(reason(rea"machines used by factories"))) )
+
+(defrule rule62
+(reason{rea =="machines used by factories"})
+=>(assert (damage (dam"Negative impact on human health"))))
+
+(defrule rule63
+(damage {dam =="Negative impact on human health"})
+=>(assert(over_come(oc"Construction of factories in remote places"))))
+
+
+(defrule rule64
+(problem {prob =="Nuclear explosions"})
+=>(assert(type(ty"Radioactive pollution")))(assert(reason(rea"they capture particles from the ground as well as dust suspended in the air"))) )
+
+(defrule rule65
+(reason{rea =="they capture particles from the ground as well as dust suspended in the air"})
+=>(assert (damage (dam"Negative impact on human health"))))
+
+(defrule rule66
+(damage {dam =="Negative impact on human health"})
+=>(assert(over_come(oc"Monitoring the location of nuclear reactors"))))
+
+
+
+
+;;;;;;;Eman
+
+(defrule rule67
+(problem {prob ==" high-pressure networks "})
+=>(assert(type(ty" Electromagnetic pollution ")))(assert(reason(rea" transmit electricity over long distances "))) )
+
+
+(defrule rule68
+(reason{rea ==" transmit electricity over long distances "})
+=>(assert (damage (dam" symptoms of insomnia, stress and headache "))))
+
+
+(defrule rule69
+(damage {dam ==" symptoms of insomnia, stress and headache "})
+=>(assert(over_come(oc" Stay away from high-pressure networks "))))
+
+(defrule rule70
+(problem {prob ==" small waves (microwave) "})
+=>(assert(type(ty" Electromagnetic pollution ")))(assert(reason(rea" Exposure to microwave radiation "))) )
+
+
+(defrule rule71
+(reason{rea ==" Exposure to microwave radiation "})
+=>(assert (damage (dam" Magnetic fields interfere with brain function "))))
+
+
+(defrule rule72
+(damage {dam ==" Magnetic fields interfere with brain function "})
+=>(assert(over_come(oc" No exposure to microwave radiation "))))
+
+(defrule rule73
+(problem {prob ==" Radio stations "})
+=>(assert(type(ty" Electromagnetic pollution ")))(assert(reason(rea" Exposure to radio waves "))) )
+
+
+(defrule rule74
+(reason{rea ==" Exposure to radio and television "})
+=>(assert (damage (dam" blood diseases, hormone imbalances "))))
+
+
+(defrule rule75
+(damage {dam ==" blood diseases "})
+=>(assert(over_come(oc" Keep away from radio "))))
+
+(defrule rule76
+(problem {prob =="Tv station"})
+=>(assert(type(ty" Electromagnetic pollution ")))(assert(reason(rea" Exposure to TV waves "))))
+
+
+(defrule rule77
+(reason{rea ==" Exposure to TV waves "})
+=>(assert (damage (dam" hormone imbalances "))))
+
+
+(defrule rule78
+(damage {dam ==" hormone imbalances "})
+=>(assert(over_come(oc" Keep away from TV"))))
+
+(defrule rule79
+(problem {prob =="Mobile phones"})
+=>(assert(type(ty" Electromagnetic pollution ")))(assert(reason(rea" X - ray exposure to mobile phones "))) )
+
+
+(defrule rule80
+(reason{rea ==" X - ray exposure to mobile phones "})
+=>(assert (damage (dam "cancer disease"))))
+
+
+(defrule rule81
+(damage {dam ==" cancer disease "})
+=>(assert(over_come(oc" Reduce the use of mobile phones "))))
+
+
+
+
+
+
+
+
+
+
+

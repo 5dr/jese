@@ -1,0 +1,71 @@
+;;;;;templatescode
+
+(deftemplate boil
+(slot degree))
+
+(deftemplate material
+(slot name))
+
+(deftemplate density
+(slot den))
+
+;;;;rules code
+
+(defrule rule1
+(boil {degree =="100"})
+=>(assert(material(name"water"))))
+
+(defrule rule2
+(material {name =="water"})
+=>(assert (density (den"1 g\cm^3"))))
+
+(defrule rule3
+(boil {degree =="674"})
+=>(assert(material(name"Mercury"))))
+
+(defrule rule4
+(material {name =="Mercury"})
+=>(assert (density (den"13.54 g\cm^3 and its the biger density in th world"))))
+
+(defrule rule5
+(boil {degree =="300"})
+=>(assert(material(name"olive oil"))))
+
+(defrule rule6
+(material {name =="olive oil"})
+=>(assert (density (den".8 g\cm^3"))))
+
+(defrule rule7
+(boil {degree =="184.4"})
+=>(assert(material(name"iodine"))))
+
+(defrule rule8
+(material {name =="iodine"})
+=>(assert (density (den"5 g\cm^3"))))
+
+(defrule rule9
+(boil {degree =="64.6"})
+=>(assert(material(name"methanol"))))
+
+(defrule rule10
+(material {name =="methanol"})
+=>(assert (density (den".79 g\cm^3"))))
+
+(defrule rule11
+(boil {degree =="80.1"})
+=>(assert(material(name"petrol"))))
+
+(defrule rule12
+(material {name =="petrol"})
+=>(assert (density (den".87 g\cm^3"))))
+
+
+
+
+
+
+
+
+
+
+
